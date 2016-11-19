@@ -12,5 +12,7 @@ if [[ ! -d $p ]] ; then
     fi
 else
     echo "Fetch item $item"
-    cd $p && git fetch origin
+    $(cd $p && git fetch origin)
 fi
+
+$(cd $p && git update-server-info)
